@@ -1,6 +1,6 @@
-/* eslint-disable indent */
 const express = require('express');
 const moongoose = require('mongoose');
+const routes = require ('./routes');
 
 const app = express();
 moongoose.connect(
@@ -11,5 +11,6 @@ moongoose.connect(
     }
 );
 app.use(express.json());
+app.use(routes);
 
 app.listen(3333);

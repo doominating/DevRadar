@@ -1,16 +1,8 @@
 const { Router } = require('express');
+const DevController = require('./controllers/DevController');
 
 const routes = Router();
 
-// Tipos de parâmetros:
-// Query Params: request.query
-// Route Params: request.params
-// Body: request.body
-
-routes.post('/users', (request, response) => {
-  console.log(request.body);
-
-  return response.json({ message: 'hello world' });
-});
+routes.post('/devs', DevController.store);
 
 module.exports = routes;
