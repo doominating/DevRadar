@@ -1,2 +1,2 @@
-# Semana OmniStack 10
-Desafio Rocketseat da Semana Omnistack 10 (DevRadar)
+# DevRadar
+Projeto do desafio da Rocketseat - Semana Omnistack #10
