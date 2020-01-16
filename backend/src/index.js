@@ -8,6 +8,8 @@ moongoose.connect(
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        useFindAndModify: false,
+        useCreateIndex: true,
     }
 );
 app.use(express.json());
