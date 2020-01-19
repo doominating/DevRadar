@@ -42,71 +42,47 @@ function App() {
         <ul>
           <li className="dev-item">
             <header>
-              <img
-                src="https://avatars2.githubusercontent.com/u/8459716?s=460&v=4"
-                alt="Afonso Amaro"
-                className="src"
-              />
+              <img src="https://avatars2.githubusercontent.com/u/8459716?s=460&v=4" alt="Afonso Amaro"/>
               <div className="user-info">
                 <strong>Afonso Amaro</strong>
                 <span>ReactJS, React Native, Node.js</span>
               </div>
             </header>
             <p>Software Engineer</p>
-            <a href="https://github.com/doominating">
-              Acessar perfil no Github
-            </a>
+            <a href="https://github.com/doominating">Acessar perfil no Github</a>
           </li>
           <li className="dev-item">
             <header>
-              <img
-                src="https://avatars2.githubusercontent.com/u/8459716?s=460&v=4"
-                alt="Afonso Amaro"
-                className="src"
-              />
+              <img src="https://avatars2.githubusercontent.com/u/8459716?s=460&v=4" alt="Afonso Amaro"/>
               <div className="user-info">
                 <strong>Afonso Amaro</strong>
                 <span>ReactJS, React Native, Node.js</span>
               </div>
             </header>
             <p>Software Engineer</p>
-            <a href="https://github.com/doominating">
-              Acessar perfil no Github
-            </a>
+            <a href="https://github.com/doominating">Acessar perfil no Github</a>
           </li>
           <li className="dev-item">
             <header>
-              <img
-                src="https://avatars2.githubusercontent.com/u/8459716?s=460&v=4"
-                alt="Afonso Amaro"
-                className="src"
-              />
+              <img src="https://avatars2.githubusercontent.com/u/8459716?s=460&v=4" alt="Afonso Amaro"/>
               <div className="user-info">
                 <strong>Afonso Amaro</strong>
                 <span>ReactJS, React Native, Node.js</span>
               </div>
             </header>
             <p>Software Engineer</p>
-            <a href="https://github.com/doominating">
-              Acessar perfil no Github
-            </a>
+            <a href="https://github.com/doominating">Acessar perfil no Github</a>
           </li>
           <li className="dev-item">
             <header>
-              <img
-                src="https://avatars2.githubusercontent.com/u/8459716?s=460&v=4"
-                alt="Afonso Amaro"
-                className="src"
-              />
+              <img src="https://avatars2.githubusercontent.com/u/8459716?s=460&v=4" alt="Afonso Amaro"/>
               <div className="user-info">
                 <strong>Afonso Amaro</strong>
                 <span>ReactJS, React Native, Node.js</span>
               </div>
             </header>
             <p>Software Engineer</p>
-            <a href="https://github.com/doominating">
-              Acessar perfil no Github
-            </a>
+            <a href="https://github.com/doominating">Acessar perfil no Github</a>
           </li>
         </ul>
       </main>

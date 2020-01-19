@@ -4,7 +4,7 @@ main {
 
 main ul {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   list-style: none;
 }
@@ -59,4 +59,10 @@ li.dev-item a {
 
 li.dev-item a:hover {
   color: #5a2ea6;
+}
+
+@media (max-width: 640px) {
+  main ul {
+    grid-template-columns: 1fr;
+  }
 }
