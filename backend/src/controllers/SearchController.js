@@ -8,8 +8,6 @@ module.exports = {
 
     const techsArray = parseStringAsArray(techs);
 
-    console.log(techsArray);
-
     const devs = await Dev.find({
       techs: {
         $in: techsArray,
@@ -24,6 +22,7 @@ module.exports = {
         }
       }
     })
+
     return response.json({ devs });
   }
 }
