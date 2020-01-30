@@ -43,10 +43,10 @@ module.exports = {
   },
 
   async update() {
-      // Atualizar: nome, avatar_url, bio, location, techs,
+    // Atualizar: nome, avatar_url, bio, location, techs,
   },
 
   async destroy() {
-
+    // Deletar por id
   },
 };
