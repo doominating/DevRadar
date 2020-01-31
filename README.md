@@ -10,7 +10,7 @@ Project of Rocketseat Challenge - Semana Omnistack #10
 
 ## Usage
 
-First, on the web app, you can register your github user and the technologies yiou're work with, and also your geolocation coordinate. Then, you can search for devs with some technologies on the mobile app over the map, based on geolocation.
+On the web app, you can register your github user and the technologies you work with, and also your geolocation coordinate. Then, you can search for devs with technologies on the mobile app over the map, based on geolocation.
 
 ## Technologies
 
@@ -32,22 +32,28 @@ Clone the project with the following command:
 git clone https://github.com/doominating/semanaomnistack10.git
 ```
 
-Then, get in the project dir and install the dependencies for each one:
+Then, get in the project dir and install the dependencies for each enviroment (backend, frontend and mobile):
 
 ```sh
-cd semanaomnistack10
+cd semanaomnistack10/backend
+yarn install
+
+cd semanaomnistack10/frontend
+yarn install
+
+cd semanaomnistack10/mobile
 yarn install
 ```
 
 Then, you have to fill your MongoDB configuration in .env file.
 
-You can start the server with:
+Finally, you can start the applications (backend/frontend/mobile) with:
 
 ```sh
 yarn start
 ```
 
-If you are in development environment, you can use the development server:
+If you are in development environment, you can use the development server for backend:
 
 ```sh
 yarn dev
