@@ -1,12 +1,19 @@
 const express = require('express');
 const moongoose = require('mongoose');
 const cors = require('cors');
+const http = require('http');
+
 const routes = require ('./routes');
+const { setupWebsocket } = require('./websocket');
 const dotenv = require('dotenv');
 
 dotenv.config();
 
 const app = express();
+const server = http.Server(app);
+
+setupWebsocket(server);
+
 moongoose.connect(
     process.env.MONGO_URI,
     {
@@ -22,4 +29,4 @@ app.use(routes);
 
 const port = process.env.PORT || 3000;
 
-app.listen(port);
+server.listen(port);
