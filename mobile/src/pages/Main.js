@@ -1,14 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Image, View, Text, TextInput, TouchableOpacity } from 'react-native';
-import MapView, { Marker, Callout } from "react-native-maps";
-import { requestPermissionsAsync, getCurrentPositionAsync } from 'expo-location';
+import {
+  StyleSheet,
+  Image,
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
+import MapView, { Marker, Callout } from 'react-native-maps';
+import {
+  requestPermissionsAsync,
+  getCurrentPositionAsync,
+} from 'expo-location';
 import { MaterialIcons } from '@expo/vector-icons';
 
 import api from '../services/api';
-import { connect, disconnect } from '../services/socket';
+import { connect, disconnect, subscribeToNewDevs } from '../services/socket';
 
 function Main({ navigation }) {
-  const[devs, setDevs] = useState([]);
+  const [devs, setDevs] = useState([]);
   const [currentRegion, setCurrentRegion] = useState(null);
   const [techs, setTechs] = useState('');
 
@@ -28,14 +38,20 @@ function Main({ navigation }) {
           longitude,
           latitudeDelta: 0.04,
           longitudeDelta: 0.04,
-        })
+        });
       }
     }
 
     loadInitialPosition();
   }, []);
 
+  useEffect(() => {
+    subscribeToNewDevs(dev => setDevs([...devs, dev]));
+  }, [devs]);
+
   function setupWebsocket() {
+    disconnect();
+
     const { latitude, longitude } = currentRegion;
 
     connect(latitude, longitude, techs);
@@ -46,9 +62,9 @@ function Main({ navigation }) {
 
     const response = await api.get('/search', {
       params: {
-        latitude,//: -20.8017605, //latitude,
-        longitude,//: -49.355163, //longitude,
-        techs,//: 'ReactJS',
+        latitude,
+        longitude,
+        techs,
       },
     });
 
@@ -63,6 +79,7 @@ function Main({ navigation }) {
   if (!currentRegion) {
     return null;
   }
+
   return (
     <>
       <MapView
@@ -87,7 +104,9 @@ function Main({ navigation }) {
 
             <Callout
               onPress={() => {
-                navigation.navigate('Profile', { github_username: dev.github_username, });
+                navigation.navigate('Profile', {
+                  github_username: dev.github_username,
+                });
               }}
             >
               <View style={styles.callout}>
@@ -116,9 +135,10 @@ function Main({ navigation }) {
     </>
   );
 }
+
 const styles = StyleSheet.create({
   map: {
-    flex:1
+    flex: 1,
   },
 
   avatar: {
@@ -126,7 +146,7 @@ const styles = StyleSheet.create({
     height: 54,
     borderRadius: 4,
     borderWidth: 4,
-    borderColor: '#FFF'
+    borderColor: '#FFF',
   },
 
   callout: {
@@ -149,7 +169,7 @@ const styles = StyleSheet.create({
 
   searchForm: {
     position: 'absolute',
-    bottom: 20,
+    top: 20,
     left: 20,
     right: 20,
     zIndex: 5,
@@ -171,7 +191,6 @@ const styles = StyleSheet.create({
       height: 4,
     },
     elevation: 2,
-
   },
 
   loadButton: {
@@ -182,8 +201,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: 15,
-  }
-
+  },
 });
 
 export default Main;
