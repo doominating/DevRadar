@@ -67,6 +67,7 @@ yarn dev
 - Add update user infos feature;
 - Add delete user feature;
 - Improve the location coordinates with some google search functionality on frontend web;
+- Refactoring to improve the code readability;
 
 ## License
 
