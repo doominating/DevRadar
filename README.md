@@ -1,6 +1,6 @@
 # DevRadar (NodeJS, ReactJS & React-Native)
 
-Project of Rocketseat Challenge - Semana Omnistack #10
+Rocketseat OminiStack Week #10 Challenge Project
 
 - [DevRadar (NodeJS, ReactJS & React-Native)](#devradar-nodejs-reactjs--react-native)
   - [Usage](#usage)
