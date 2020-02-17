@@ -15,11 +15,11 @@ On the web app, you can register your github user and the technologies you work 
 
 ## Technologies
 
-This app features all the latest tools and practices in javscript stack!
+This app features all the latest tools and practices in javascript stack!
 
-- ⚛️ **React Js** — A JavaScript library for building user interfaces - [site](https://reactjs.org/)
+- ⚛️ **React JS** — A JavaScript library for building user interfaces - [site](https://reactjs.org/)
 - ⚛️ **React Native** — A lib that provides a way to create native apps for Android and iOS - [site](https://facebook.github.io/react-native/)
-- 💹 **Node Js** — A web framework for Node Js - [site](https://nodejs.org/)
+- 💹 **Node JS** — A web framework for Node Js - [site](https://nodejs.org/)
 - 📄 **MongoDB** — A cross-platform and open-source document-oriented database - [site](https://www.mongodb.com/)
 - ♻️ **Socket IO** — A library for realtime web applications - [site](https://socket.io/)
 - **Express** - A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications - [site](https://expressjs.com/pt-br/)
@@ -30,19 +30,19 @@ This app features all the latest tools and practices in javscript stack!
 Clone the project with the following command:
 
 ```sh
-git clone https://github.com/doominating/semanaomnistack10.git
+git clone https://github.com/doominating/DevRadar.git
 ```
 
 Then, get in the project dir and install the dependencies for each enviroment (backend, frontend and mobile):
 
 ```sh
-cd semanaomnistack10/backend
+cd DevRadar/backend
 yarn install
 
-cd semanaomnistack10/frontend
+cd DevRadar/frontend
 yarn install
 
-cd semanaomnistack10/mobile
+cd DevRadar/mobile
 yarn install
 ```
 
