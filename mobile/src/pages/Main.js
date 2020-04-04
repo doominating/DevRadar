@@ -6,6 +6,7 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
+  Keyboard,
 } from 'react-native';
 import MapView, { Marker, Callout } from 'react-native-maps';
 import {
@@ -46,7 +47,7 @@ function Main({ navigation }) {
   }, []);
 
   useEffect(() => {
-    subscribeToNewDevs(dev => setDevs([...devs, dev]));
+    subscribeToNewDevs((dev) => setDevs([...devs, dev]));
   }, [devs]);
 
   function setupWebsocket() {
@@ -58,6 +59,8 @@ function Main({ navigation }) {
   }
 
   async function loadDevs() {
+    Keyboard.dismiss();
+
     const { latitude, longitude } = currentRegion;
 
     const response = await api.get('/search', {
@@ -87,7 +90,7 @@ function Main({ navigation }) {
         initialRegion={currentRegion}
         style={styles.map}
       >
-        {devs.map(dev => (
+        {devs.map((dev) => (
           <Marker
             key={dev._id}
             coordinate={{
